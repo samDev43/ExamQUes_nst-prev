@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CBT Examination</h1>
+    <div style="display: flex; justify-content: space-between;">
+        <div id="examPage">
+          
+        </div>
+      <div><p id="showTime"></p></div>
+        <div>
+         <p>question</p>
+         <input id="question" type="text">
+         <p>options</p>
+         <input id="option1" type="text">
+         <input id="option2" type="text">
+         <input id="option3" type="text">
+
+
+         <input id="correctAns" type="text">
+         <button onclick="getExamInfo()">submit question</button>
+        </div>
+    </div>
+    <div>
+       <button onclick="startExam()">start</button>
+       <button onclick="previousFUNC()">PREVIOUS</button>
+       <button onclick="nextFUNC()">NEXT</button>
+       <button onclick="subbmit()">submit</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
