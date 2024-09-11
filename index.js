@@ -24,10 +24,15 @@ let questionIndex = 0;
 
      displayExam=()=>{
         let questionON = examinationsInfo[questionIndex]
-
-       if(!examinationsInfo.length == 0){
-         let optionsHTML = questionON.options.map((option, i)=>{
-            //  let checked = questionON.optionChoseByUsrer == option ?'checked':'';
+        
+        if(!examinationsInfo.length == 0){
+           console.log(questionON)
+           let {correctAns,optionChoseByUsrer,question,options} = questionON;
+           console.log(options)
+           let [now,mom,uyt] = options;
+           console.log(now,mom,uyt)
+         let optionsHTML = options.map((option, i)=>{
+             let checked = mom == option ?'checked':'';
              console.log(checked)
            return  ` <input id="options${i}" name='option'  value='${option}' type="radio" ${checked}>
                <label for="">${option}</label>`
@@ -35,7 +40,7 @@ let questionIndex = 0;
          }).join('')
            
          document.getElementById('examPage').innerHTML = `
-              <p>${questionON.question}</p>
+              <h3>${questionON.question}</h3>
               <div>
                  ${optionsHTML}
              </div>
